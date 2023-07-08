@@ -6,11 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import org.junit.jupiter.api.Assertions;
-
 import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+
+import java.nio.file.*;
 
 public class NewTest {
   //declare Selenium WebDriver
@@ -49,9 +50,9 @@ public class NewTest {
   public void beforeTest() {
 	  //Setting system properties of ChromeDriver
 	  //to amend directory path base on your local file path
-	  String chromeDriverDir = "C:\\Program Files\\Google\\Chrome\\chromedriver.exe";
-
-	  System.setProperty("webdriver.chrome.driver", chromeDriverDir);
+	  Path path = Paths.get("/Users/angkokleong/Desktop/chromedriver");
+		
+	  System.setProperty("webdriver.chrome.driver", path.toString());
 
 	  //initialize FirefoxDriver at the start of test
 	  webDriver = new ChromeDriver();  
