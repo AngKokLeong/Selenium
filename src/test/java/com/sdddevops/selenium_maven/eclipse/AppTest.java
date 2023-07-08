@@ -1,4 +1,4 @@
-package com.sdddevops.selenium;
+package com.sdddevops.selenium_maven.eclipse;
 
 import static org.junit.Assert.assertTrue;
 
